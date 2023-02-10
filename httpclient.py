@@ -123,7 +123,6 @@ class HTTPClient(object):
             
         content_type = "application/x-www-form-urlencoded"
         request_header = "POST {} HTTP/1.1\r\nHost: {}\r\nContent-Type: {}\r\nContent-Length: {}\r\nConnection: close\r\n\r\n".format(path, host, content_type, len(args_urlencode))+args_urlencode
-        print(request_header)
         
         self.connect(host, port)
         self.sendall(request_header)
